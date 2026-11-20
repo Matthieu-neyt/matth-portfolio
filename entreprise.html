@@ -4,7 +4,501 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Entreprise — Portfolio BTS SIO | Matthieu Neyt</title>
-<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ============================================================
+   Portfolio BTS SIO — Matthieu Neyt
+   Style inspiré du modèle SIO SISR : bleu #0066CC, cartes blanches
+   ============================================================ */
+
+html{scroll-behavior:smooth;}
+
+:root{
+  --primaire:#0066CC;
+  --primaire-fonce:#0052a3;
+  --primaire-tres-fonce:#004080;
+  --vert:#00A651;
+  --orange:#FF6B35;
+  --fond:#f8f9fa;
+  --texte:#333333;
+  --texte-fonce:#1a202c;
+  --texte-doux:#4a5568;
+  --carte:#ffffff;
+  --bordure:rgba(0,0,0,.06);
+  --ombre:0 10px 30px rgba(0,0,0,.05);
+  --rayon:15px;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background-color:var(--fond);
+  color:var(--texte);
+  line-height:1.65;
+  font-size:16px;
+}
+
+a{color:var(--primaire);text-decoration:none;}
+a:hover{color:var(--primaire-fonce);text-decoration:underline;}
+
+/* ---------- Barre de navigation ---------- */
+header.topbar{
+  background:var(--carte);
+  border-bottom:1px solid var(--bordure);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.topbar-inner{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:6px;
+  min-height:64px;
+}
+.brand{
+  font-weight:700;
+  font-size:1.05rem;
+  color:var(--texte-fonce);
+  letter-spacing:.2px;
+  padding:14px 0;
+}
+.brand .brand-sub{
+  color:var(--primaire);
+  font-weight:600;
+}
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:2px;
+}
+nav a{
+  display:block;
+  padding:10px 16px;
+  border-radius:8px;
+  color:var(--texte-doux);
+  font-weight:600;
+  font-size:.92rem;
+  transition:all .3s ease;
+}
+nav a:hover{
+  color:var(--primaire);
+  background:#eef5fd;
+  text-decoration:none;
+}
+nav a.actif{
+  color:#fff;
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--primaire-fonce) 100%);
+}
+nav a.actif:hover{color:#fff;}
+
+/* ---------- Bandeau d'accueil ---------- */
+.hero{
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--primaire-tres-fonce) 100%);
+  color:#fff;
+  text-align:center;
+  padding:64px 20px 56px;
+}
+.hero h1{
+  margin:0;
+  font-size:2.6rem;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+.hero .statut{
+  margin:14px 0 0;
+  font-size:1.15rem;
+  color:#d6e9fb;
+}
+.hero .detail{
+  margin:8px 0 0;
+  font-size:1rem;
+  color:#b9d7f3;
+}
+.hero .actions{
+  margin-top:26px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+}
+.btn{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:8px;
+  font-weight:600;
+  font-size:.95rem;
+  transition:all .3s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--primaire-fonce) 100%);
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff;
+}
+.btn-primary:hover{
+  background:linear-gradient(135deg,var(--primaire-fonce) 0%,var(--primaire-tres-fonce) 100%);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,102,204,.3);
+  color:#fff;
+  text-decoration:none;
+}
+.btn-clair{
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+}
+.btn-clair:hover{
+  background:rgba(255,255,255,.24);
+  color:#fff;
+  text-decoration:none;
+  transform:translateY(-2px);
+}
+
+/* ---------- Conteneur ---------- */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+main{padding:44px 0 72px;}
+
+/* ---------- Titres ---------- */
+h2.titre-section{
+  font-size:1.75rem;
+  font-weight:700;
+  color:var(--texte-fonce);
+  margin:0 0 10px;
+}
+h2.titre-section .accent{color:var(--primaire);}
+p.sous-titre-section{
+  color:var(--texte-doux);
+  margin:0 0 32px;
+  max-width:860px;
+}
+h3{
+  font-size:1.2rem;
+  font-weight:700;
+  color:var(--texte-fonce);
+  margin:34px 0 14px;
+}
+
+/* ---------- Cartes ---------- */
+.carte{
+  background:var(--carte);
+  border-radius:var(--rayon);
+  border:1px solid var(--bordure);
+  box-shadow:var(--ombre);
+  padding:26px 28px;
+  margin-bottom:24px;
+  transition:all .3s ease;
+}
+.carte h3{margin-top:0;}
+.hover-lift:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(0,102,204,.12);
+}
+
+.grille{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem;
+}
+
+/* ---------- Bandeau profil ---------- */
+.profil{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  flex-wrap:wrap;
+  background:var(--carte);
+  border-radius:var(--rayon);
+  border:1px solid var(--bordure);
+  box-shadow:var(--ombre);
+  padding:32px;
+  margin-bottom:28px;
+}
+.avatar{
+  width:128px;
+  height:128px;
+  flex:0 0 128px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--vert) 100%);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.6rem;
+  font-weight:700;
+  letter-spacing:1px;
+  box-shadow:0 8px 24px rgba(0,102,204,.25);
+}
+.profil .qui{flex:1 1 340px;}
+.profil .qui h2{
+  margin:0 0 6px;
+  font-size:1.6rem;
+  color:var(--texte-fonce);
+}
+.profil .qui .role{
+  color:var(--primaire);
+  font-weight:600;
+  margin:0 0 14px;
+}
+.profil .qui p{margin:0 0 12px;color:var(--texte-doux);}
+
+.etiquettes{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:16px;}
+.etiquette{
+  font-size:.75rem;
+  padding:5px 14px;
+  border-radius:9999px;
+  font-weight:600;
+  letter-spacing:.025em;
+}
+.etiquette-bleu{background:#d0ebff;color:#004a8f;}
+.etiquette-vert{background:#d4edda;color:#155724;}
+.etiquette-orange{background:#ffe5d0;color:#c04600;}
+.etiquette-jaune{background:#FFF3CD;color:#856404;}
+.etiquette-gris{background:#e2e3e5;color:#383d41;}
+.etiquette-rose{background:#F8D7DA;color:#721C24;}
+
+ul.puces{margin:0;padding-left:20px;color:var(--texte-doux);}
+ul.puces li{margin-bottom:8px;}
+
+/* ---------- Compétences ---------- */
+.competence{margin-bottom:18px;}
+.competence .ligne{
+  display:flex;
+  justify-content:space-between;
+  font-size:.93rem;
+  margin-bottom:6px;
+  font-weight:600;
+  color:var(--texte-fonce);
+}
+.competence .ligne span:last-child{color:var(--texte-doux);font-weight:500;}
+.barre{
+  height:9px;
+  background:#e9eef4;
+  border-radius:9999px;
+  overflow:hidden;
+}
+.barre i{
+  display:block;
+  height:100%;
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--vert) 100%);
+  border-radius:9999px;
+}
+
+/* ---------- Cartes de projets / fiches ---------- */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem;
+  margin-top:1.5rem;
+}
+.project-card{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  display:flex;
+  flex-direction:column;
+  border:1px solid rgba(0,0,0,.05);
+  transition:all .3s ease;
+}
+.project-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(0,102,204,.12);
+}
+.card-head{
+  height:96px;
+  background:linear-gradient(135deg,#e0e7ff 0%,#f3f4f6 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--primaire);
+  font-weight:700;
+  font-size:.95rem;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  text-align:center;
+  padding:0 14px;
+}
+.card-content{
+  padding:1.5rem;
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
+}
+.card-content h3{
+  font-size:1.15rem;
+  font-weight:700;
+  margin:0 0 .5rem;
+  color:var(--texte-fonce);
+}
+.card-content p{
+  color:var(--texte-doux);
+  font-size:.95rem;
+  margin:0 0 1.2rem;
+  line-height:1.6;
+  flex-grow:1;
+}
+.tech-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-top:auto;
+}
+
+/* ---------- Tableaux ---------- */
+.tableau-wrap{
+  overflow-x:auto;
+  border-radius:var(--rayon);
+  box-shadow:var(--ombre);
+  border:1px solid var(--bordure);
+  background:#fff;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.94rem;
+}
+th,td{
+  padding:13px 16px;
+  text-align:left;
+  border-bottom:1px solid #edf1f5;
+  vertical-align:top;
+}
+th{
+  background:var(--primaire);
+  color:#fff;
+  font-weight:600;
+  font-size:.9rem;
+  letter-spacing:.02em;
+}
+tbody tr:nth-child(even){background:#fafcfe;}
+tbody tr:last-child td{border-bottom:none;}
+td strong{color:var(--texte-fonce);}
+
+/* ---------- Encadré ---------- */
+.encadre{
+  background:#eef5fd;
+  border-left:4px solid var(--primaire);
+  border-radius:0 12px 12px 0;
+  padding:18px 22px;
+  margin:24px 0;
+}
+.encadre p{margin:0;color:var(--texte-doux);}
+
+/* ---------- Veille ---------- */
+.thematique{
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--primaire-fonce) 100%);
+  color:#fff;
+  padding:14px 22px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:1.08rem;
+  margin:38px 0 20px;
+  box-shadow:0 8px 20px rgba(0,102,204,.18);
+}
+.fiche{
+  background:#fff;
+  border-radius:var(--rayon);
+  border:1px solid var(--bordure);
+  box-shadow:var(--ombre);
+  padding:24px 26px;
+  margin-bottom:20px;
+  transition:all .3s ease;
+}
+.fiche:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(0,102,204,.12);
+}
+.fiche .meta{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:12px;}
+.fiche h4{margin:0 0 10px;color:var(--texte-fonce);font-size:1.1rem;}
+.fiche p{margin:0 0 10px;color:var(--texte-doux);}
+.fiche .source{font-size:.86rem;color:#718096;margin:0;}
+
+.outils{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+  margin-top:1.5rem;
+}
+.outil{
+  background:#fff;
+  border-radius:15px;
+  border:1px solid rgba(0,0,0,.05);
+  box-shadow:0 10px 30px rgba(0,0,0,.05);
+  padding:24px;
+  transition:all .3s ease;
+}
+.outil:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(0,102,204,.12);
+}
+.outil .logo{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--primaire) 0%,var(--vert) 100%);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:.95rem;
+  margin-bottom:14px;
+}
+.outil h4{margin:0 0 8px;color:var(--texte-fonce);font-size:1.05rem;}
+.outil p{margin:0 0 12px;font-size:.92rem;color:var(--texte-doux);}
+.outil .source{font-size:.85rem;margin:0;}
+
+/* ---------- Pied de page ---------- */
+footer.site{
+  background:var(--texte-fonce);
+  color:#cbd5e0;
+  padding:36px 20px;
+  text-align:center;
+  font-size:.9rem;
+}
+footer.site p{margin:0 0 8px;}
+footer.site a{color:#fff;text-decoration:none;}
+footer.site a:hover{text-decoration:underline;}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.fade-in-up{animation:fadeInUp .6s ease-out;}
+
+/* ---------- Barre de défilement ---------- */
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background:#f1f1f1;}
+::-webkit-scrollbar-thumb{background:var(--primaire);border-radius:4px;}
+::-webkit-scrollbar-thumb:hover{background:var(--primaire-fonce);}
+
+/* ---------- Mobile ---------- */
+@media (max-width:768px){
+  .hero h1{font-size:1.8rem;}
+  .hero{padding:44px 20px 40px;}
+  .topbar-inner{padding:0 1rem;}
+  nav a{padding:8px 11px;font-size:.85rem;}
+  .brand{font-size:.95rem;padding:12px 0;}
+  .profil{padding:22px;}
+  .avatar{width:92px;height:92px;flex-basis:92px;font-size:1.9rem;}
+  .carte{padding:20px;}
+}
+
+</style>
 </head>
 <body>
 
