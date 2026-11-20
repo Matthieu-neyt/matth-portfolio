@@ -8,142 +8,156 @@
 </head>
 <body>
 
-<header class="site">
-  <p class="nom">Matthieu Neyt</p>
-  <p class="sous-titre">Portfolio BTS SIO — option SISR · BTS SIO1C</p>
-  <div class="contact">
-    <a href="mailto:matthneyt@gmail.com">matthneyt@gmail.com</a>
-    <a href="tel:+33783283370">07 83 28 33 70</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Matthieu Neyt <span class="brand-sub">· SIO SISR</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="e5.html">Épreuve E5</a></li>
+        <li><a href="e6.html">Épreuve E6</a></li>
+        <li><a href="entreprise.html" class="actif">Entreprise</a></li>
+        <li><a href="veille.html">Veille technologique</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<nav class="site">
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="e5.html">E5</a></li>
-    <li><a href="e6.html">E6</a></li>
-    <li><a href="veille.html">Veille technologique</a></li>
-    <li><a href="entreprise.html" class="actif">Entreprise</a></li>
-  </ul>
-</nav>
-
 <main>
+  <div class="container">
 
-  <h2 class="titre-page">Mon entreprise d'accueil</h2>
-  <p class="intro-page">
-    Présentation de l'organisation qui m'accueille en stage : son activité, son
-    organisation, son système d'information et les missions que j'y réalise.
-  </p>
+    <h2 class="titre-section">Mon <span class="accent">entreprise</span> d'accueil</h2>
+    <p class="sous-titre-section">
+      Présentation de l'organisation qui m'accueille en stage : son activité, son
+      organisation, son système d'information et les missions que j'y réalise.
+    </p>
 
-  <div class="carte">
-    <h3>Identification de l'organisation</h3>
+    <div class="carte">
+      <h3>Identification de l'organisation</h3>
+      <div class="tableau-wrap">
+        <table>
+          <tbody>
+            <tr><th>Raison sociale</th><td>[À compléter — nom de l'entreprise]</td></tr>
+            <tr><th>Activité principale</th><td>[À compléter — secteur et métier]</td></tr>
+            <tr><th>Statut juridique</th><td>[À compléter — SARL, SAS, association, établissement public…]</td></tr>
+            <tr><th>Effectif</th><td>[À compléter — nombre de salariés]</td></tr>
+            <tr><th>Adresse</th><td>[À compléter — ville et département]</td></tr>
+            <tr><th>Service d'accueil</th><td>[À compléter — service informatique ou référent numérique]</td></tr>
+            <tr><th>Période de stage</th><td>[À compléter — dates de début et de fin]</td></tr>
+            <tr><th>Tuteur de stage</th><td>[À compléter — nom et fonction]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="card-head">Activité</div>
+        <div class="card-content">
+          <h3>Activité et organisation</h3>
+          <p>
+            [À compléter : en quelques lignes, décrire ce que fait l'organisation, à qui
+            elle s'adresse, comment le travail est organisé entre les services et quelle
+            place y occupe l'informatique.]
+          </p>
+          <div class="tech-tags">
+            <span class="etiquette etiquette-bleu">Services</span>
+            <span class="etiquette etiquette-gris">Sites</span>
+            <span class="etiquette etiquette-vert">Publics servis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-head">Système d'information</div>
+        <div class="card-content">
+          <h3>Environnement technique</h3>
+          <p>
+            Parc de postes, serveurs, réseau, annuaire, sauvegardes et logiciels métiers
+            de l'organisation.
+          </p>
+          <div class="tech-tags">
+            <span class="etiquette etiquette-jaune">Postes clients</span>
+            <span class="etiquette etiquette-orange">Serveurs</span>
+            <span class="etiquette etiquette-rose">Réseau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Mes missions en stage</h3>
     <div class="tableau-wrap">
       <table>
+        <thead>
+          <tr><th>Mission</th><th>Description</th><th>Outils</th><th>Compétence</th></tr>
+        </thead>
         <tbody>
-          <tr><th>Raison sociale</th><td>[À compléter — nom de l'entreprise]</td></tr>
-          <tr><th>Activité principale</th><td>[À compléter — secteur et métier]</td></tr>
-          <tr><th>Statut juridique</th><td>[À compléter — SARL, SAS, association, établissement public…]</td></tr>
-          <tr><th>Effectif</th><td>[À compléter — nombre de salariés]</td></tr>
-          <tr><th>Adresse</th><td>[À compléter — ville et département]</td></tr>
-          <tr><th>Service d'accueil</th><td>[À compléter — service informatique ou référent numérique]</td></tr>
-          <tr><th>Période de stage</th><td>[À compléter — dates de début et de fin]</td></tr>
-          <tr><th>Tuteur de stage</th><td>[À compléter — nom et fonction]</td></tr>
+          <tr>
+            <td><strong>[Mission 1 — à compléter]</strong></td>
+            <td>[Ce que j'ai fait concrètement]</td>
+            <td>[Matériel / logiciels]</td>
+            <td>[Compétence du référentiel]</td>
+          </tr>
+          <tr>
+            <td><strong>[Mission 2 — à compléter]</strong></td>
+            <td>[Ce que j'ai fait concrètement]</td>
+            <td>[Matériel / logiciels]</td>
+            <td>[Compétence du référentiel]</td>
+          </tr>
+          <tr>
+            <td><strong>[Mission 3 — à compléter]</strong></td>
+            <td>[Ce que j'ai fait concrètement]</td>
+            <td>[Matériel / logiciels]</td>
+            <td>[Compétence du référentiel]</td>
+          </tr>
         </tbody>
       </table>
     </div>
-  </div>
 
-  <div class="grille">
-    <div class="carte">
-      <h3>Activité et organisation</h3>
+    <div class="encadre">
       <p>
-        [À compléter : en quelques lignes, décrire ce que fait l'organisation, à qui
-        elle s'adresse, comment le travail est organisé entre les services et quelle
-        place y occupe l'informatique.]
+        Chaque mission donnera lieu à une fiche détaillée dans l'onglet
+        <a href="e5.html">Épreuve E5</a> ou <a href="e6.html">Épreuve E6</a> selon la
+        compétence évaluée, avec les documents produits joints.
       </p>
-      <ul class="puces">
-        <li>Services ou pôles de l'organisation : [à compléter]</li>
-        <li>Nombre de sites ou d'agences : [à compléter]</li>
-        <li>Publics ou clients servis : [à compléter]</li>
-      </ul>
     </div>
 
-    <div class="carte">
-      <h3>Système d'information</h3>
-      <ul class="puces">
-        <li>Parc de postes : [nombre et systèmes]</li>
-        <li>Serveurs et services hébergés : [à compléter]</li>
-        <li>Réseau : [commutation, Wi-Fi, accès Internet, opérateur]</li>
-        <li>Annuaire et gestion des comptes : [à compléter]</li>
-        <li>Sauvegardes : [solution et fréquence]</li>
-        <li>Logiciels métiers : [à compléter]</li>
-      </ul>
+    <h3>Ce que le stage m'apporte</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="card-head">Technique</div>
+        <div class="card-content">
+          <h3>Sur le plan technique</h3>
+          <p>Découverte d'un environnement informatique réel et hétérogène.</p>
+          <div class="tech-tags">
+            <span class="etiquette etiquette-bleu">Procédures internes</span>
+            <span class="etiquette etiquette-vert">Outils professionnels</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="card-head">Professionnel</div>
+        <div class="card-content">
+          <h3>Sur le plan professionnel</h3>
+          <p>Communication avec les utilisateurs, priorisation et travail en équipe.</p>
+          <div class="tech-tags">
+            <span class="etiquette etiquette-orange">Communication</span>
+            <span class="etiquette etiquette-jaune">Comptes rendus</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <h3>Mes missions en stage</h3>
-  <div class="tableau-wrap">
-    <table>
-      <thead>
-        <tr><th>Mission</th><th>Description</th><th>Outils</th><th>Compétence</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>[Mission 1 — à compléter]</td>
-          <td>[Ce que j'ai fait concrètement]</td>
-          <td>[Matériel / logiciels]</td>
-          <td>[Compétence du référentiel]</td>
-        </tr>
-        <tr>
-          <td>[Mission 2 — à compléter]</td>
-          <td>[Ce que j'ai fait concrètement]</td>
-          <td>[Matériel / logiciels]</td>
-          <td>[Compétence du référentiel]</td>
-        </tr>
-        <tr>
-          <td>[Mission 3 — à compléter]</td>
-          <td>[Ce que j'ai fait concrètement]</td>
-          <td>[Matériel / logiciels]</td>
-          <td>[Compétence du référentiel]</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="encadre">
-    <p>
-      Chaque mission donnera lieu à une fiche détaillée dans l'onglet
-      <a href="e5.html">E5</a> ou <a href="e6.html">E6</a> selon la compétence
-      évaluée, avec les documents produits joints.
-    </p>
-  </div>
-
-  <h3>Ce que le stage m'apporte</h3>
-  <div class="grille">
-    <div class="carte">
-      <h3>Sur le plan technique</h3>
-      <ul class="puces">
-        <li>Découverte d'un environnement informatique réel et hétérogène</li>
-        <li>Application des procédures internes de l'organisation</li>
-        <li>Utilisation d'outils professionnels de support et d'administration</li>
-        <li>Compréhension des contraintes d'exploitation et de continuité de service</li>
-      </ul>
+    <div style="text-align:center;margin-top:36px;">
+      <a class="btn btn-primary" href="index.html" style="border:none;">Retour à l'accueil</a>
     </div>
-    <div class="carte">
-      <h3>Sur le plan professionnel</h3>
-      <ul class="puces">
-        <li>Communication avec des utilisateurs non techniciens</li>
-        <li>Priorisation des demandes et gestion du temps</li>
-        <li>Travail en équipe et remontée d'information au tuteur</li>
-        <li>Rédaction de comptes rendus et de procédures</li>
-      </ul>
-    </div>
-  </div>
 
+  </div>
 </main>
 
 <footer class="site">
-  <p>© 2026 Matthieu Neyt — Portfolio BTS SIO1C · <a href="index.html">Retour à l'accueil</a></p>
+  <p>© 2026 Matthieu Neyt — Portfolio BTS SIO SISR</p>
+  <p>Tous droits réservés · <a href="mailto:matthneyt@gmail.com">matthneyt@gmail.com</a></p>
 </footer>
 
 </body>

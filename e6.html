@@ -3,154 +3,163 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E6 — Portfolio BTS SIO | Matthieu Neyt</title>
+<title>Épreuve E6 — Portfolio BTS SIO | Matthieu Neyt</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="site">
-  <p class="nom">Matthieu Neyt</p>
-  <p class="sous-titre">Portfolio BTS SIO — option SISR · BTS SIO1C</p>
-  <div class="contact">
-    <a href="mailto:matthneyt@gmail.com">matthneyt@gmail.com</a>
-    <a href="tel:+33783283370">07 83 28 33 70</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Matthieu Neyt <span class="brand-sub">· SIO SISR</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="e5.html">Épreuve E5</a></li>
+        <li><a href="e6.html" class="actif">Épreuve E6</a></li>
+        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="veille.html">Veille technologique</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<nav class="site">
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="e5.html">E5</a></li>
-    <li><a href="e6.html" class="actif">E6</a></li>
-    <li><a href="veille.html">Veille technologique</a></li>
-    <li><a href="entreprise.html">Entreprise</a></li>
-  </ul>
-</nav>
-
 <main>
+  <div class="container">
 
-  <h2 class="titre-page">Épreuve E6</h2>
-  <p class="intro-page">
-    Administration des systèmes et des réseaux. Cette épreuve évalue les compétences
-    techniques de conception, de déploiement et d'exploitation d'une infrastructure
-    informatique, présentées à travers un dossier de projets.
-  </p>
-
-  <div class="carte">
-    <h3>Objectif de l'épreuve</h3>
-    <p>
-      L'épreuve E6 porte sur l'administration des systèmes et des réseaux. Elle
-      s'appuie sur un dossier présentant un projet d'administration (ou un ensemble
-      de réalisations cohérentes) : analyse du besoin, choix techniques, maquette,
-      déploiement, tests et documentation. Le candidat doit être capable d'expliquer
-      ses choix et de les justifier.
+    <h2 class="titre-section">Épreuve <span class="accent">E6</span></h2>
+    <p class="sous-titre-section">
+      Administration des systèmes et des réseaux. Cette épreuve évalue les compétences
+      techniques de conception, de déploiement et d'exploitation d'une infrastructure
+      informatique, présentées à travers un dossier de projets.
     </p>
-  </div>
 
-  <h3>Compétences du référentiel travaillées</h3>
-  <div class="tableau-wrap">
-    <table>
-      <thead>
-        <tr><th>Compétence</th><th>Contenu</th><th>État</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Concevoir une solution d'infrastructure</td>
-          <td>Recueil du besoin, schéma d'architecture, choix des technologies et dimensionnement</td>
-          <td>À documenter</td>
-        </tr>
-        <tr>
-          <td>Déployer un service réseau</td>
-          <td>Adressage IP, VLAN, commutation, routage, services réseau (DHCP, DNS, annuaire)</td>
-          <td>À documenter</td>
-        </tr>
-        <tr>
-          <td>Administrer un système serveur</td>
-          <td>Installation, configuration, gestion des comptes et des droits, stratégies de groupe</td>
-          <td>À documenter</td>
-        </tr>
-        <tr>
-          <td>Sécuriser l'infrastructure</td>
-          <td>Cloisonnement, pare-feu, gestion des accès, sauvegardes et plan de reprise</td>
-          <td>À documenter</td>
-        </tr>
-        <tr>
-          <td>Automatiser et superviser</td>
-          <td>Scripts d'administration, supervision des services et des ressources</td>
-          <td>À documenter</td>
-        </tr>
-        <tr>
-          <td>Documenter et présenter</td>
-          <td>Documentation technique, schémas, procédures de test et soutenance orale</td>
-          <td>À documenter</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Projets d'administration</h3>
-  <div class="tableau-wrap">
-    <table>
-      <thead>
-        <tr><th>Projet</th><th>Objectif technique</th><th>Technologies</th><th>État</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>[Projet 1 — à compléter]</td>
-          <td>[Service à déployer et besoin couvert]</td>
-          <td>[Windows Server, Linux, équipements réseau]</td>
-          <td>[Maquette / en cours / terminé]</td>
-        </tr>
-        <tr>
-          <td>[Projet 2 — à compléter]</td>
-          <td>[Service à déployer et besoin couvert]</td>
-          <td>[Windows Server, Linux, équipements réseau]</td>
-          <td>[Maquette / en cours / terminé]</td>
-        </tr>
-        <tr>
-          <td>[Projet 3 — à compléter]</td>
-          <td>[Service à déployer et besoin couvert]</td>
-          <td>[Windows Server, Linux, équipements réseau]</td>
-          <td>[Maquette / en cours / terminé]</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3>Environnement de maquette</h3>
-  <div class="grille">
     <div class="carte">
-      <h3>Systèmes et annuaire</h3>
-      <ul class="puces">
-        <li>Windows Server : rôles AD DS, DNS, DHCP, partages</li>
-        <li>Linux Debian / Ubuntu : services web, fichiers, annuaire</li>
-        <li>Clients Windows et Linux joints au domaine</li>
-        <li>Stratégies de groupe et scripts de connexion</li>
-      </ul>
+      <h3>Objectif de l'épreuve</h3>
+      <p>
+        L'épreuve E6 porte sur l'administration des systèmes et des réseaux. Elle
+        s'appuie sur un dossier présentant un projet d'administration (ou un ensemble
+        de réalisations cohérentes) : analyse du besoin, choix techniques, maquette,
+        déploiement, tests et documentation. Le candidat doit être capable d'expliquer
+        ses choix et de les justifier.
+      </p>
     </div>
-    <div class="carte">
-      <h3>Réseau et sécurité</h3>
-      <ul class="puces">
-        <li>Commutateurs, VLAN et liaison trunk</li>
-        <li>Routage inter-VLAN et passerelle</li>
-        <li>Pare-feu et règles de filtrage</li>
-        <li>Sauvegardes, restauration et supervision</li>
-      </ul>
+
+    <h3>Compétences du référentiel travaillées</h3>
+    <div class="tableau-wrap">
+      <table>
+        <thead>
+          <tr><th>Compétence</th><th>Contenu</th><th>État</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Concevoir une solution d'infrastructure</strong></td>
+            <td>Recueil du besoin, schéma d'architecture, choix des technologies et dimensionnement</td>
+            <td>À documenter</td>
+          </tr>
+          <tr>
+            <td><strong>Déployer un service réseau</strong></td>
+            <td>Adressage IP, VLAN, commutation, routage, services réseau (DHCP, DNS, annuaire)</td>
+            <td>À documenter</td>
+          </tr>
+          <tr>
+            <td><strong>Administrer un système serveur</strong></td>
+            <td>Installation, configuration, gestion des comptes et des droits, stratégies de groupe</td>
+            <td>À documenter</td>
+          </tr>
+          <tr>
+            <td><strong>Sécuriser l'infrastructure</strong></td>
+            <td>Cloisonnement, pare-feu, gestion des accès, sauvegardes et plan de reprise</td>
+            <td>À documenter</td>
+          </tr>
+          <tr>
+            <td><strong>Automatiser et superviser</strong></td>
+            <td>Scripts d'administration, supervision des services et des ressources</td>
+            <td>À documenter</td>
+          </tr>
+          <tr>
+            <td><strong>Documenter et présenter</strong></td>
+            <td>Documentation technique, schémas, procédures de test et soutenance orale</td>
+            <td>À documenter</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </div>
 
-  <div class="encadre">
-    <p>
-      Chaque projet fera l'objet d'un dossier : schéma de l'architecture, procédure
-      d'installation, tests réalisés avec leurs résultats, et bilan des difficultés
-      rencontrées. C'est ce dossier qui servira de support à la soutenance.
-    </p>
-  </div>
+    <h3>Projets d'administration</h3>
+    <div class="tableau-wrap">
+      <table>
+        <thead>
+          <tr><th>Projet</th><th>Objectif technique</th><th>Technologies</th><th>État</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>[Projet 1 — à compléter]</strong></td>
+            <td>[Service à déployer et besoin couvert]</td>
+            <td>[Windows Server, Linux, équipements réseau]</td>
+            <td>[Maquette / en cours / terminé]</td>
+          </tr>
+          <tr>
+            <td><strong>[Projet 2 — à compléter]</strong></td>
+            <td>[Service à déployer et besoin couvert]</td>
+            <td>[Windows Server, Linux, équipements réseau]</td>
+            <td>[Maquette / en cours / terminé]</td>
+          </tr>
+          <tr>
+            <td><strong>[Projet 3 — à compléter]</strong></td>
+            <td>[Service à déployer et besoin couvert]</td>
+            <td>[Windows Server, Linux, équipements réseau]</td>
+            <td>[Maquette / en cours / terminé]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
+    <h3>Environnement de maquette</h3>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="card-head">Systèmes et annuaire</div>
+        <div class="card-content">
+          <h3>Serveurs et clients</h3>
+          <p>Rôles serveurs, annuaire et postes joints au domaine.</p>
+          <div class="tech-tags">
+            <span class="etiquette etiquette-bleu">Active Directory</span>
+            <span class="etiquette etiquette-jaune">DNS / DHCP</span>
+            <span class="etiquette etiquette-orange">Debian / Ubuntu</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="card-head">Réseau et sécurité</div>
+        <div class="card-content">
+          <h3>Infrastructure</h3>
+          <p>Cloisonnement du réseau, filtrage et sauvegardes.</p>
+          <div class="tech-tags">
+            <span class="etiquette etiquette-vert">VLAN</span>
+            <span class="etiquette etiquette-rose">Pare-feu</span>
+            <span class="etiquette etiquette-gris">Sauvegardes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="encadre">
+      <p>
+        Chaque projet fera l'objet d'un dossier : schéma de l'architecture, procédure
+        d'installation, tests réalisés avec leurs résultats, et bilan des difficultés
+        rencontrées. C'est ce dossier qui servira de support à la soutenance.
+      </p>
+    </div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <a class="btn btn-primary" href="index.html" style="border:none;">Retour à l'accueil</a>
+    </div>
+
+  </div>
 </main>
 
 <footer class="site">
-  <p>© 2026 Matthieu Neyt — Portfolio BTS SIO1C · <a href="index.html">Retour à l'accueil</a></p>
+  <p>© 2026 Matthieu Neyt — Portfolio BTS SIO SISR</p>
+  <p>Tous droits réservés · <a href="mailto:matthneyt@gmail.com">matthneyt@gmail.com</a></p>
 </footer>
 
 </body>
